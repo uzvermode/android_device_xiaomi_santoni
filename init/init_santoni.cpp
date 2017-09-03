@@ -33,10 +33,9 @@
 #include <sstream>
 #include <sys/sysinfo.h>
 
-#include "vendor_init.h"
+#include <android-base/properties.h>
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
+#include "vendor_init.h"
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
@@ -46,6 +45,8 @@ char const *heapmaxfree;
 char const *large_cache_height;
 
 static std::string board_id;
+using android::base::GetProperty;
+using android::base::SetProperty;
 
 static void import_cmdline(const std::string& key,
         const std::string& value, bool for_emulator __attribute__((unused)))
@@ -84,11 +85,7 @@ static void init_alarm_boot_properties()
      * 7 -> CBLPWR_N pin toggled (for external power supply)
      * 8 -> KPDPWR_N pin toggled (power key pressed)
      */
-     if (boot_reason == 3) {
-        property_set("ro.alarm_boot", "true");
-     } else {
-        property_set("ro.alarm_boot", "false");
-     }
+     SetProperty("ro.alarm_boot", boot_reason == 3 ? "true" : "false");
 }
 
 void check_device()
@@ -126,10 +123,12 @@ void check_device()
 
 void init_variant_properties()
 {
-    if (property_get("ro.cm.device") != "santoni")
-        return;
 
-    import_kernel_cmdline(0, import_cmdline);
+    std::string device;
+
+    device = GetProperty("ro.cm.device", "");
+    if (device != "santoni")
+        return;
     
     //set board
     property_set("ro.product.wt.boardid", board_id.c_str());
