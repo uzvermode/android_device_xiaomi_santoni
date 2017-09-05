@@ -131,11 +131,13 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera \
-    Snap
+    Snap \
+		camera.device@3.2-impl \
+		android.hardware.camera.provider@2.4-impl
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl		
+    android.hardware.drm@1.0-impl
 
 # Display
 PRODUCT_PACKAGES += \
