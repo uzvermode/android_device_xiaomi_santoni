@@ -70,17 +70,16 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-USE_CUSTOM_AUDIO_POLICY := 1
     audio.primary.msm8937 \
     audio.a2dp.default \
     audio.usb.default \
-		audio.r_submix.default \
+    audio.r_submix.default \
     libaudio-resampler \
 
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-		libqcomvoiceprocessingdescriptors \
+    libqcomvoiceprocessingdescriptors \
     libqcompostprocbundle
 
  PRODUCT_PACKAGES += \
@@ -126,14 +125,14 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
-		android.hardware.bluetooth@1.0-impl
+    android.hardware.bluetooth@1.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera \
     Snap \
-		camera.device@3.2-impl \
-		android.hardware.camera.provider@2.4-impl
+    camera.device@3.2-impl \
+    android.hardware.camera.provider@2.4-impl
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -148,8 +147,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     gralloc.msm8937 \
     hwcomposer.msm8937 \
-		libgenlock \
-		memtrack.msm8937
+    libgenlock \
+    memtrack.msm8937
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -179,7 +178,7 @@ PRODUCT_PACKAGES += \
     gps.msm8937 \
     libcurl \
     libgnsspps \
-		libshims_get_process_name
+    libshims_get_process_name
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
@@ -193,6 +192,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl
 
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+		
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
@@ -224,7 +227,7 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8937 \
-		android.hardware.light@2.0-impl
+    android.hardware.light@2.0-impl
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -261,7 +264,7 @@ PRODUCT_PACKAGES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
-		libtinyxml
+    libtinyxml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -274,9 +277,9 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-#	RenderScript HAL
+#RenderScript HAL
 PRODUCT_PACKAGES += \
-	  android.hardware.renderscript@1.0-impl
+    android.hardware.renderscript@1.0-impl
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
@@ -287,11 +290,11 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libcnefeatureconfig \
     libxml2 \
-		rild_socket
+    rild_socket
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
-		$(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
+    $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -308,7 +311,7 @@ PRODUCT_COPY_FILES += \
 
 # USB HAL
 PRODUCT_PACKAGES += \
-		android.hardware.usb@1.0-service
+    android.hardware.usb@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -317,7 +320,7 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \
-		wifilogd \
+    wifilogd \
     hostapd \
     dhcpcd.conf \
     wpa_supplicant \
