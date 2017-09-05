@@ -127,6 +127,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbt-vendor \
 		android.hardware.bluetooth@1.0-impl
+
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera \
@@ -153,6 +154,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
@@ -203,7 +205,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8937
+    lights.msm8937 \
+		android.hardware.light@2.0-impl
 
 # Media
 PRODUCT_COPY_FILES += \
