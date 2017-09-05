@@ -251,6 +251,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.msm8937
 
 # QMI
@@ -304,7 +305,7 @@ PRODUCT_COPY_FILES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
-		
+
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \
