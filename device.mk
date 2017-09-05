@@ -188,7 +188,7 @@ PRODUCT_COPY_FILES += \
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl
-		
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
@@ -304,6 +304,7 @@ PRODUCT_COPY_FILES += \
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \
+		wifilogd \
     hostapd \
     dhcpcd.conf \
     wpa_supplicant \
