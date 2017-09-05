@@ -173,7 +173,7 @@ PRODUCT_PACKAGES += \
 #GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl
-		
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8937 \
@@ -305,6 +305,10 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+
+# USB HAL
+PRODUCT_PACKAGES += \
+		android.hardware.usb@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
