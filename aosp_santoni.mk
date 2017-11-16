@@ -22,6 +22,10 @@ $(call inherit-product, vendor/aosp/common.mk)
 PRODUCT_NAME := aosp_santoni
 BOARD_VENDOR := Xiaomi
 
+# Include Bootanimation configuration
+TARGET_BOOT_ANIMATION_RES := 1080
+
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
