@@ -118,7 +118,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     libshim_camera \
-    Snap
+    SnapdragonCamera
 
 # Consumerir
 PRODUCT_PACKAGES += \
