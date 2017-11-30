@@ -21,3 +21,6 @@
 ## Device Picture
 
 ![Redmi 4X](https://cdn.tgdd.vn/Products/Images/42/99145/xiaomi-redmi-4x-400-400x460.png "Redmi 4X")
+
+clone 
+  | git clone htpps://github.com/SwapnilSoni1999/android_device_xiaomi_santoni.git -b Lineage-15.0 device/xiaomi/santoni |
