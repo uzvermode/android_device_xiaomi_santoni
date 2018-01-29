@@ -22,6 +22,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_santoni
 BOARD_VENDOR := Xiaomi
 
+# Device Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.invictaos.maintainer=Abhiraj Singh
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
