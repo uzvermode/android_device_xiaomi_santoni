@@ -19,6 +19,9 @@ $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/aosp/common.mk)
 
+# Include Bootanimation configuration
+TARGET_BOOT_ANIMATION_RES := 1080
+
 PRODUCT_NAME := aosp_santoni
 BOARD_VENDOR := Xiaomi
 
