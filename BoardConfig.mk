@@ -47,6 +47,12 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_CONFIG := santoni_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 
+# Audio/media/display
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
+
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
