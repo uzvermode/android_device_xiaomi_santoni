@@ -132,7 +132,9 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
-    libbt-vendor
+    libbt-vendor \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -153,7 +155,8 @@ PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service
 
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
 
 # Device Settings
 PRODUCT_PACKAGES += \
@@ -173,6 +176,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
@@ -424,7 +428,8 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
+    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0-supplicant
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/vendor/etc/wifi/p2p_supplicant_overlay.conf \
