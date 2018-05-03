@@ -155,10 +155,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl
 
-# Device Settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8937 \
@@ -289,10 +285,6 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     libandroid_net
 
-# OMNI Charger Images
-PRODUCT_PACKAGES += \
-    omni_charger_res_images
-
 # OMX
 PRODUCT_PACKAGES += \
     libmm-omxcore \
@@ -418,9 +410,9 @@ PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg \
     libwpa_client \
     hostapd \
+    wcnss_service \
     dhcpcd.conf \
     wificond \
-    wcnss_service \
     wpa_supplicant \
     wpa_supplicant.conf
 
