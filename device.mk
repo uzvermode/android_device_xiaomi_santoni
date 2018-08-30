@@ -387,6 +387,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
 
+# Properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
