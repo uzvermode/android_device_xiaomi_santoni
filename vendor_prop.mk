@@ -73,7 +73,7 @@ camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 # CNE/DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.cne.feature=1
+persist.cne.feature=1 
 
 # Coresight
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -160,7 +160,7 @@ ro.use_data_netmgrd=true \
 persist.data.netmgrd.qos.enable=true \
 persist.data.mode=concurrent
 
-# Optimize
+# Perf
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.sys.fw.dex2oat_thread_count=4 \
 dalvik.vm.boot-dex2oat-threads=8 \
@@ -182,7 +182,7 @@ persist.rild.nitz_short_ons_3=""
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-rild.libargs=-d /dev/smd0 \
+rild.libargs=-d/dev/smd0 \
 ril.subscription.types=NV,RUIM \
 DEVICE_PROVISIONED=1 \
 ro.telephony.default_network=22,20 \
@@ -203,13 +203,13 @@ persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.radio.aosp_usr_pref_sel=true \
 persist.radio.apm_sim_not_pwdn=1 \
-persist.radio.calls.on.ims=true \
+persist.radio.calls.on.ims=0 \
 persist.radio.csvt.enabled=false \
 persist.radio.custom_ecc=1 \
 persist.radio.flexmap_type=nw_mode \
 persist.radio.hw_mbn_update=0 \
 persist.radio.ims.cmcc=true \
-persist.radio.jbims=1 \
+persist.radio.jbims=0 \
 persist.radio.mt_sms_ack=20 \
 persist.radio.multisim.config=dsds \
 persist.radio.oem_socket=true \
@@ -255,10 +255,3 @@ wifi.interface=wlan0
 # Create zram disk
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.config.zram=true
-
-# ADB \
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.adb.secure=0 \
-persist.service.debuggable=1 \
-persist.service.adb.enable=1 \
-persist.sys.usb.config=mtp,adb
